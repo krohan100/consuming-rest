@@ -29,7 +29,7 @@ public class ConsumingQuoteRestApplication {
 	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
 		return args -> {
 			Quote quote = restTemplate.getForObject("https://gturnquist-quoters.cfapps.io/api/random", Quote.class);
-			log.info("Quote retrieved: " + quote.toString());
+			log.info("Quote: " + quote.toString());
 		};
 	}
 }
